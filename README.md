@@ -5,6 +5,6 @@ There are three main files to test, train and evaluate the code,
 * train.py : it is used to train the proposed network.
 * test.py : we used test.py to test the proposed network for various types of tissues.
 
-___TNote: Full implementation (missing files) will be publically available upon paper acceptance.___
+___--> Note: Full implementation (missing files) will be publically available upon paper acceptance.___
 
 ![](/assets/model.jpg)
