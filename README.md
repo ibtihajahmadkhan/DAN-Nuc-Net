@@ -6,3 +6,5 @@ There are three main files to test train and evaluate the code,
 * test.py : we used test.py to test the proposed network for various types of tissues.
 
 ___The respository is currently being updated. Full implementation (missing model file) will be publically available upon paper acceptance.___
+
+![](/assets/model.jpg)
