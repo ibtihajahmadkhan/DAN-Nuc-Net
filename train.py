@@ -26,7 +26,7 @@ Usage
 import tensorflow.keras as k
 from Data_adjust import *
 from model import dan_nuc_net
-from get_my_gpu_settings import *
+from get_gpu_settings import *
 set_my_gpu()
 
 def train_net(Data_Folder = os.path.dirname(os.path.abspath(__file__)) + '/Data/PanNuke_Train_Data/',
