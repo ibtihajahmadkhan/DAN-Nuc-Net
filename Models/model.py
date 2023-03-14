@@ -158,7 +158,4 @@ def dan_nuc_net(input_shape=(256, 256, 3)):
 
     model.summary()
 
-    tf.keras.utils.plot_model(model, to_file="Model_Plot_SCA_NucNet.png", show_shapes=True, show_layer_names=False,
-                              expand_nested=False)
-
     return model
