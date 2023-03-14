@@ -5,6 +5,6 @@ There are three main files to test, train and evaluate the code,
 * train.py : it is used to train the proposed network.
 * test.py : we used test.py to test the proposed network for various types of tissues.
 
-___--> Note: Full implementation (missing files) will be publically available upon paper acceptance.___
+___--> Note: Executable code is available at [Code Ocean](https://codeocean.com/capsule/7807470/tree) .___
 
 ![](/assets/model.jpg)
