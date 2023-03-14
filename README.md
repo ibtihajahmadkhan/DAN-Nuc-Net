@@ -3,5 +3,3 @@ This project is the implementation of the paper, ["DAN-NucNet: A dual attention 
 Expert Systems with Applications, Volume 213, Part A, 2023, 18945, SSN 0957-4174.
 
 ___--> Executable code along with reproduciable results is available at [Code Ocean](https://codeocean.com/capsule/7807470/tree) .___
-
-![](/assets/DANNucNet.jpg)
