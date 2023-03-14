@@ -1,7 +1,7 @@
 """
 Execute train.py to train the model. Note that the pre-processing is done in Matlab. That part of the code will be
 provided later on.
-A trained model can be found in Model folder, named as, "Pre-Trained_SCANucNet". Use predict.py to use our
+A trained model can be found in Model folder, named as, "Pre-Trained_DAN_NucNet". Use predict.py to use our
 trained model.
 ----------------------------------------------------------------------------------------------------------------------
 Usage
