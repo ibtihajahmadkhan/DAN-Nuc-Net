@@ -2,11 +2,14 @@
 Execute this function to segment cells in the image
 ---------------------------------------------------
 Usage
-=====
+
 --> This function expects image in tiff format.
+
 --> Put the tif image in "Data/Run/img" folder, while label in "Data/Run/cells". The names of the image and labels
     should be the same.
+
 --> For comparison put the test label in "Data/Run/cells" folder.
+
 --> The resulted images are saved in "Data/Run/output" folder.
 
 Example :
@@ -22,17 +25,17 @@ import cv2
 import matplotlib.pyplot as plt
 
 
-def segment(file_name, compare= True):
-    # Setting paths.
-    Main_Path = os.path.dirname(os.path.abspath(__file__))
-    Data_Folder = Main_Path + '/Data/Run/'
-    Model = Main_Path + '/Models/Pre-Trained_DANNucNet'
+def segment(Data_Folder = os.path.dirname(os.path.abspath(__file__)) + '/Data/Run/',
+            Model = os.path.dirname(os.path.abspath(__file__)) + '/Models/Pre-Trained_DANNucNet',
+            image_path = os.path.dirname(os.path.abspath(__file__)) + '/Data/Run/img/' + 'PA_1205.tif',
+            file_name = 'PA_1205.tif',
+            compare= True):
 
     # Load Model
     model = k.models.load_model(Model + '.h5', custom_objects={'loss': loss, 'f1_score1': f1_score})
     model.load_weights(Model + '.hdf5')
 
-    img = io.imread(Data_Folder + '/img/' + file_name, as_gray=False)
+    img = io.imread(image_path, as_gray=False)
 
     result = model.predict(np.expand_dims(img / 255., axis=0), steps=None, callbacks=None, max_queue_size=1)
     result = np.squeeze(np.squeeze(result, axis=0), axis=2)
@@ -88,7 +91,4 @@ def segment(file_name, compare= True):
         plt.show()
         plt.close()
         plt.clf()
-
-
-segment(file_name = 'BL_1595.tif', compare = True)
 
