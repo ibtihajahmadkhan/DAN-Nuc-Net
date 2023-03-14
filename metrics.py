@@ -18,18 +18,18 @@ def f1_score(y_true, y_pred):
 
 
 def IOU_Loss(y_true, y_pred):
-    MIOU = tf.keras.metrics.MeanIoU(2, name=None, dtype=None)
-    MIOU.update_state(y_true, y_pred)
-    return MIOU.result().numpy()
+    answ = tf.keras.metrics.MeanIoU(2, name=None, dtype=None)
+    answ.update_state(y_true, y_pred)
+    return answ.result().numpy()
 
 
 def Precision(y_true, y_pred):
-    MIOU = tf.keras.metrics.Precision()
-    MIOU.update_state(y_true, y_pred)
-    return MIOU.result().numpy()
+    answ = tf.keras.metrics.Precision()
+    answ.update_state(y_true, y_pred)
+    return answ.result().numpy()
 
 
 def Recall(y_true, y_pred):
-    MIOU = tf.keras.metrics.Recall()
-    MIOU.update_state(y_true, y_pred)
-    return MIOU.result().numpy()
+    answ = tf.keras.metrics.Recall()
+    answ.update_state(y_true, y_pred)
+    return answ.result().numpy()
